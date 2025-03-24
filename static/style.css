@@ -1,0 +1,89 @@
+/* Reset some styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url('../static/2024-summer-of-games-fable-v0-m10mcqxfy9ed1.png'); /* Replace with an actual background image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #b18802;
+    text-transform: uppercase;
+    border-bottom: 5px solid #d36f0c;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+li {
+    padding: 20px;
+    border-bottom: 2px solid #444;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Styling for strong elements */
+strong {
+    color: #f4b400;
+    font-size: 1.2em;
+}
+
+/* Description, Minimum and Recommended Requirements */
+.description, .min_req, .rec_req {
+    font-style: italic;
+}
+
+/* Hover effect for list items */
+li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* About section styling */
+.about {
+    font-size: 1.1em;
+    color: #d1a24a;
+    margin-top: 15px;
+}
+
+/* Divider line */
+hr {
+    border: 1px solid #d36f0c;
+    margin-top: 20px;
+}
+
+/* Styling for empty scraped data message */
+p {
+    font-size: 1.5em;
+    text-align: center;
+    color: #d1a24a;
+    margin-top: 50px;
+}

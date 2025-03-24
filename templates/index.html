@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Data</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Scraped Data</h1>
+    {% if scraped_data %}
+        <ul>
+        {% for record in scraped_data %}
+            <li>
+                <strong>URL:</strong> {{ record['url'] }} <br>
+                <strong>Timestamp:</strong> {{ record['timestamp'] }} <br>
+                {% if record['title'] %}
+                    <strong>Title:</strong> {{ record['title'] }} <br>
+                    <strong>Release Date:</strong> {{ record['release date'] }} <br>
+                    <strong>Description:</strong> <span class="description">{{ record['description'] }}</span> <br>
+                    <strong>Minimum Requirements:</strong> <span class="min_req">{{ record['min_req'] }}</span> <br>
+                    <strong>Recommended Requirements:</strong> <span class="rec_req">{{ record['rec_req'] }}</span> <br>
+                {% endif %}
+                {% if record['about'] %}
+                    <div class="about">
+                        <strong>About:</strong> {{ record['about'] }} <br>
+                    </div>
+                {% endif %}
+                <hr>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No data was scraped.</p>
+    {% endif %}
+</body>
+</html>
+
