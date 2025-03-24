@@ -33,7 +33,7 @@ def scrape_url(url):
         if 'steampowered.com' in url:
             data['title'] = soup.find('div', class_='apphub_AppName').get_text(strip=True) if soup.find('div', class_='apphub_AppName') else 'N/A'
             data['release date'] = soup.find('div', class_='date').get_text(strip=True) if soup.find('div', class_='date') else 'N/A'
-            data['description'] = soup.find('div', class_='game_area_description').get_text(strip=True) if soup.find('div', class_='game_area_description') else 'N/A'
+            data['description'] = soup.find('div', class_='game_area_description').get_text(separator="\n\n", strip=True) if soup.find('div', class_='game_area_description') else 'N/A'
             data['min_req'] = soup.find('div', class_='game_area_sys_req_leftCol').get_text(strip=True) if soup.find('div', class_='game_area_sys_req_leftCol') else 'N/A'
             data['rec_req'] = soup.find('div', class_='game_area_sys_req_rightCol').get_text(strip=True) if soup.find('div', class_='game_area_sys_req_rightCol') else 'N/A'
 
